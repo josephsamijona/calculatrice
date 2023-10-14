@@ -3,7 +3,6 @@
 // Importation des bibliothèques nécessaires
 import java.io.*;
 import java.lang.*;
-import java.lang.Math;
 import java.util.Scanner;
 
 // Définition de la classe BasicCalculator
@@ -45,13 +44,25 @@ public class BasicCalculator {
                 break;
 
             // Cas de soustraction
-            
+             case '-':
+                o = num1 - num2;
+                break;
+
 
             // Cas de multiplication
-            
+            case '*':
+                o = num1 * num2;
+                break;
+
 
             // Cas de division
-            
+            case '/':
+            if (num2 != 0) {
+                o = num1 / num2;
+            } else {
+                System.out.println("La division par zéro n'est pas autorisée.");
+                return;
+            }
 
             // Cas par défaut si l'opérateur n'est pas l'un des quatre précédents
             default:
